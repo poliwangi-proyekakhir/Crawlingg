@@ -18,14 +18,16 @@ Route::get('/', 'BerandaController@index');
 Route::get('/beranda', 'BerandaController@index');
 Route::get('/beranda/login', 'BerandaController@login');
 Route::post('/beranda/cek_login', 'BerandaController@cek_login');
+Route::post('/beranda/proses_simpan', 'BerandaController@proses_simpan');
 Route::get('/beranda/logout', 'BerandaController@logout');
+Route::get('/beranda/register', 'BerandaController@register');
 
 Route::get('/user', 'UserController@home');
 Route::get('/user/tambah_user', 'UserController@tambah_user');
 Route::post('/user/proses_simpan', 'UserController@proses_simpan');
 Route::get('/user/edit/{id_pengguna}', 'UserController@edit');
-Route::post('/user/update_proses', 'UserController@update_proses');
-Route::get('/user/hapus/{id_pengguna}', 'UserController@hapus_user');
+Route::put('/user/update_proses/{id_pengguna}', 'UserController@update_proses');
+Route::get('/user/hapus_user/{id_pengguna}', 'UserController@hapus_user');
 
 Route::get('/admin', 'AdminController@index');
 Route::post('/admin/cek_login', 'AdminController@cek_login');

@@ -49,8 +49,8 @@ class AdminController extends Controller
     {
 
     	$this->validate($request, 
-    		['username' => 'required'],
-    		['password' => 'required']);
+    		['username' => 'required',
+    		'password' => 'required']);
 
     	$username = $request->input('username');
     	$pwd = $request->input('password');
@@ -69,12 +69,14 @@ class AdminController extends Controller
     	if($user!='0' && $usera->level == '1'){
     		Session::put('login', 'Selamat Datang');
     		Session::put('username', $usera->username);
+            Session::put('level', $usera->level);
     		return redirect('/admin/dashboard');
     	}
 
     	if($user!='0' && $usera->level == '2'){
     		Session::put('login', 'Selamat Datang level 2');
     		Session::put('username', $usera->username);
+            Session::put('level', $usera->level);
     		return redirect('/beranda');
     	}
         
@@ -85,6 +87,8 @@ class AdminController extends Controller
     	Session::forget('username');
     	Session::forget('login');
     	Session::forget('gagal_login');
+        Session::forget('level');
+         //Session::forget('alert_hapus');
         return redirect('/admin');
         
     }

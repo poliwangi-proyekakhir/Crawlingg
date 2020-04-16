@@ -175,6 +175,12 @@
     <script src="{{asset('css/js/data-table/jquery.dataTables.min.js')}}"></script>
     <script src="{{asset('css/js/data-table/data-table-act.js')}}"></script>
 
+<script>
+    $("#success-alert").fadeTo(2000, 700).slideUp(500, function(){
+        $("#success-alert").slideUp(700);
+    });
+</script>
+
 </body>
 
 </html>

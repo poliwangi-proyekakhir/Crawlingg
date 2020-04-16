@@ -25,7 +25,7 @@
     </div>
     <!-- Main Menu area End-->
 
-@foreach($user as $u)
+
  <!-- Form Examples area start-->
     <div class="form-example-area">
         <div class="container">
@@ -36,23 +36,27 @@
                             <h2>Basic Example</h2>
                            
                         </div>
-                        <form action="/user/update_proses" method="POST">
+                        <form action="/user/update_proses/{{ $user->id_pengguna }}" method="POST">
                         <div class="form-example-int">
                             <div class="form-group">
                               
                                 <label>Username</label>
                                 <div class="nk-int-st">
-                                	{{ csrf_field() }}
-                                    <input type="hidden" name="id_pengguna" value="{{ $u->id_pengguna }}" class="form-control input-sm">
-                                	<input type="text" name="username" value="{{ $u->username }}" class="form-control input-sm">
+                                	
+                                    {{ csrf_field() }}
+                                    {{ method_field('PUT') }}
+
+                                    <input type="hidden" name="id_pengguna" value="{{ $user->id_pengguna }}" class="form-control input-sm">
+                                    <input type="hidden" name="level" value="{{ $user->level }}" class="form-control input-sm">
+                                	<input type="text" name="username" value="{{ $user->username }}" class="form-control input-sm">
                                 </div>
                             </div>
                         </div>
                         <div class="form-example-int mg-t-15">
                             <div class="form-group">
-                                <label>Password</label>
+                                <label>Email</label>
                                 <div class="nk-int-st">
-                                    <input type="text" name="password" value="{{ $u->password }}" class="form-control input-sm">
+                                    <input type="text" name="email" value="{{ $user->email }}" class="form-control input-sm">
                                 </div>
                             </div>
                         </div>
@@ -68,7 +72,6 @@
         </div>
     </div>
     <!-- Form Examples area End-->
-    @endforeach
 
 
     <br><br><br><br><br><br>
