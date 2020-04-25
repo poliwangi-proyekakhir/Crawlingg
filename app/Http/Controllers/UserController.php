@@ -21,7 +21,7 @@ class UserController extends Controller
         $link = 'active';
         $user = Pengguna::all();
 
-        return view('data_user',['user' => $user, 'link' => $link]);
+        return view('admin/data_user',['user' => $user, 'link' => $link]);
 
     }
 
@@ -41,7 +41,7 @@ class UserController extends Controller
 
 
         $link = 'active';
-    	return view('form_tambah_user', ['link' => $link]);
+    	return view('admin/form_tambah_user', ['link' => $link]);
     }
 
     if(Session::has('level')!=1){
@@ -63,7 +63,7 @@ class UserController extends Controller
         $user = Pengguna::find($id_pengguna);
         $link = 'active';
 
-    	return view('form_edit_user',['user' => $user, 'link' => $link]);
+    	return view('admin/form_edit_user',['user' => $user, 'link' => $link]);
     }
 
     if(Session::has('level')!=1){

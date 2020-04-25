@@ -12,6 +12,9 @@
     
                         <li><a href="/user"><i class="notika-icon notika-windows"></i> User</a>
                         </li>
+
+                        <li><a href="/admin/data_scrape"><i class="notika-icon notika-windows"></i> Data Scrape</a>
+                        </li>
                         
                     </ul>
                     

@@ -16,11 +16,11 @@ class BerandaController extends Controller
         $a = Session::get('username');
         Session::put('login', 'Selamat Datang');
         Session::put('username', $a);
-        return view('home');
+        return view('home/home');
 
     }else{
         Session::put('username', '');
-        return view('home');
+        return view('home/home');
     }
     }
 
@@ -93,12 +93,12 @@ class BerandaController extends Controller
 
     public function login()
     {
-        return view('form_login');
+        return view('home/form_login');
     }
 
      public function register()
     {
-        return view('form_register_home');
+        return view('home/form_register_home');
     }
 
     public function logout()

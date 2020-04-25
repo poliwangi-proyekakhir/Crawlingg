@@ -13,6 +13,9 @@
     
                         <li class="{{ $link }}"><a href="/user"><i class="notika-icon notika-windows"></i> User</a>
                         </li>
+    
+                        <li><a href="/admin/data_scrape"><i class="notika-icon notika-windows"></i> Data Scrape</a>
+                        </li>
                         
                     </ul>
                     
@@ -33,7 +36,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="form-example-wrap">
                         <div class="cmp-tb-hd">
-                            <h2>Basic Example</h2>
+                            <h2>Ubah Data Pengguna</h2>
                            
                         </div>
                         <form action="/user/update_proses/{{ $user->id_pengguna }}" method="POST">

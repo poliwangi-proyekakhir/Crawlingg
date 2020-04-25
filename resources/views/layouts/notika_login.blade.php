@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Form Examples | Notika - Notika Admin Template</title>
+    <title>Banding Harga | Login Admin</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -160,6 +160,13 @@
     <script src="{{asset('css/js/tawk-chat.js')}}"></script>
 
     <script src="{{asset('css/js/login/login-action.js')}}"></script>
+
+<script>
+    $("#success-alert").fadeTo(2000, 700).slideUp(500, function(){
+        $("#success-alert").slideUp(700);
+    });
+</script>
+    
 </body>
 
 </html>

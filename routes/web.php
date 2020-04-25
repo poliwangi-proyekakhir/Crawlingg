@@ -30,6 +30,15 @@ Route::put('/user/update_proses/{id_pengguna}', 'UserController@update_proses');
 Route::get('/user/hapus_user/{id_pengguna}', 'UserController@hapus_user');
 
 Route::get('/admin', 'AdminController@index');
+Route::get('/admin/login_new_user', 'AdminController@login_new_user');
+Route::get('/admin/register_user', 'AdminController@register_user');
+Route::post('/admin/simpan_user', 'AdminController@simpan_user');
+Route::get('/admin/data_scrape', 'AdminController@data_scrape');
+Route::get('/admin/add_data_scrape', 'AdminController@add_data_scrape');
+Route::post('/admin/proses_simpan_data_scrape', 'AdminController@proses_simpan_data_scrape');
+Route::get('/admin/edit_scrape/{id_data_scrape}', 'AdminController@edit_scrape');
+Route::put('/admin/update_proses_data_scrape/{id_data_scrape}', 'AdminController@update_proses_data_scrape');
+Route::get('/admin/hapus_scrape/{id_data_scrape}', 'AdminController@hapus_scrape');
 Route::post('/admin/cek_login', 'AdminController@cek_login');
 Route::get('/admin/dashboard', 'AdminController@dashboard');
 Route::get('/admin/logout', 'AdminController@logout');

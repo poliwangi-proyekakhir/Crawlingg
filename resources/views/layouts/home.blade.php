@@ -33,53 +33,47 @@
 
     <!-- Header Section Begin -->
     <header class="header-section">
-        <div class="header-top">
-            <div class="container">
-                <div class="ht-left">
-                    <div class="mail-service">
-                        <i class=" fa fa-envelope"></i>
-                        hello.colorlib@gmail.com
-                    </div>
-                    <div class="phone-service">
-                        <i class=" fa fa-phone"></i>
-                        +65 11.188.888
-                    </div>
-                </div>
-
-                <?php $a = Session::get('level');?>
-
-                <?php if($a != ''){?>
-                
-                <div class="ht-right">
-                    <a href="/beranda/logout" class="login-panel"><i class="fa fa-user"></i>Logout</a>
-                  
-                  
-                </div>
-            <?php }?>
-
-
-                <?php if($a == ''){?>
-                <div class="ht-right">
-                    <a href="/beranda/login" class="login-panel"><i class="fa fa-user"></i>Login</a>
-                   
-                    
-                </div>
-            <?php }?>
-
-
-            </div>
-        </div>
+       
         <div class="container">
             <div class="inner-header">
                 <div class="row">
                     <div class="col-lg-2 col-md-2">
                         <div class="logo">
+                            
                             <a href="./index.html">
                                 <img src="{{asset('css/home_template/img/logo.png')}}" alt="">
                             </a>
+
+
+                        </div>
+                    </div>
+
+                      <div class="col-lg-7 col-md-5">
+                        <div class="advanced-search">
+                            <button type="button" class="category-btn">Search</button>
+                            <div class="input-group">
+                                <input type="text">
+                                <button type="button"><i class="ti-search"></i></button>
+                            </div>
                         </div>
                     </div>
                    
+                   <div class="col-lg-3 text-right col-md-3">
+                        <ul class="nav-right">
+                           
+                            <?php $a = Session::get('level');?>
+
+                            <?php if($a != ''){?>
+
+                            <li class="heart-icon"><a href="/beranda/logout" class="login-panel"><i class="fa fa-user"></i> Logout</a></li>
+                            <?php }?>
+
+                            <?php if($a == ''){?>
+                                <li class="heart-icon"><a href="/beranda/login" class="login-panel"><i class="fa fa-user"></i> Login</a></li>
+                             <?php }?>
+
+                        </ul>
+                    </div>
                     
                 </div>
             </div>
