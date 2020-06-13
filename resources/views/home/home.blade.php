@@ -88,9 +88,7 @@
                     <div class="filter-control">
                         <ul>
                             <li class="active">Clothings</li>
-                            <li>HandBag</li>
-                            <li>Shoes</li>
-                            <li>Accessories</li>
+                            
                         </ul>
                     </div>
                     <div class="product-slider owl-carousel">

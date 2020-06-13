@@ -27,7 +27,8 @@
                             </div>
                             <div class="group-input">
                                 <label for="username">Email *</label>
-                                <input type="text" value="{{ old('email') }}" required name="email" id="email">
+                                <input type="hidden" value="{{ $user }}" name="id_pengguna" id="id_pengguna">
+                                <input type="text" autocomplete="off" value="{{ old('email') }}" required name="email" id="email">
                             <font color="red">{{ $errors->first('email') }}</font>
                             </div>
                             <div class="group-input">
@@ -36,10 +37,10 @@
                                 <font color="red">{{ $errors->first('password') }}</font>
                             </div>
                           
-                            <button type="submit" class="site-btn login-btn">Sign In</button>
+                            <button type="submit" class="site-btn login-btn">Crete Account</button>
                         </form>
                         <div class="switch-login">
-                            <a href="/beranda/register" class="or-login">Or Create An Account</a>
+                            <a href="/beranda/login" class="or-login">Login</a>
                         </div>
                     </div>
                 </div>

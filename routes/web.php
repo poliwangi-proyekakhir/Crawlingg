@@ -21,6 +21,7 @@ Route::post('/beranda/cek_login', 'BerandaController@cek_login');
 Route::post('/beranda/proses_simpan', 'BerandaController@proses_simpan');
 Route::get('/beranda/logout', 'BerandaController@logout');
 Route::get('/beranda/register', 'BerandaController@register');
+Route::get('/beranda/verifemail/{id_pengguna}', 'BerandaController@verifemail');
 
 Route::get('/user', 'UserController@home');
 Route::get('/user/tambah_user', 'UserController@tambah_user');
@@ -43,4 +44,7 @@ Route::post('/admin/cek_login', 'AdminController@cek_login');
 Route::get('/admin/dashboard', 'AdminController@dashboard');
 Route::get('/admin/logout', 'AdminController@logout');
 Route::post('/admin/simpan_user', 'AdminController@simpan_user');
+
+
+Route::get('/beranda/kirimemail','BerandaController@kirimemail');
 
